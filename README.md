@@ -7,3 +7,4 @@ global COVID-19 ncov 3d maps
 
 ![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
 
+微信:42692305
