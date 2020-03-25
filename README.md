@@ -1,2 +1,8 @@
 # COVID-19-3d-globe-api
-global COVID-19 ncov 3d maps http://pyact.com/ncov-globe/by-state.html
+global COVID-19 ncov 3d maps
+
+按省份 http://pyact.com/ncov-globe/by-state.html
+
+按国家http://pyact.com/ncov-globe/by-state.html
+
+![byState](readme_img\byState.gif)
