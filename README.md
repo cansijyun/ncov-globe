@@ -5,4 +5,5 @@ global COVID-19 ncov 3d maps
 
 按国家http://pyact.com/ncov-globe/by-state.html
 
-![byState](readme_img\byState.gif)
+![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
+
