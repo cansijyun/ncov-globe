@@ -22,7 +22,7 @@ def get_china():
     resp_json=json.loads(json_str[0])
     print(resp_json)
     with open('static/chinaByProvice.json', 'w', encoding="UTF-8") as result_file:
-        json.dump(resp_json, result_file)
+        json.dump(resp_json, result_file,ensure_ascii=False)
 
 
 #处理国内省份数据保存为可读数据
@@ -46,7 +46,7 @@ def parser_provinces():
                         new_province_list.append({'name':name,'lat':lat,'lng':lng,'confirmed':comfirmed,'current':current})
     print(new_province_list)
     with open('mid/newProvinces.json', 'w', encoding="UTF-8") as result_file:
-        json.dump(new_province_list, result_file)
+        json.dump(new_province_list, result_file,ensure_ascii=False)
 
 # with open('results.json', 'w', encoding="UTF-8") as result_file:
 #     json.dump(data_state, result_file)
@@ -86,9 +86,9 @@ def extend_two_list():
             new_list=states+provinces
             print(new_list)
             with open('mid/twoList.json', 'w', encoding="UTF-8") as result_file:
-                json.dump(new_list, result_file)
+                json.dump(new_list, result_file,ensure_ascii=False)
 #获取最终分省份图
-def get_fInal_by_state(type):
+def get_final_by_state(type):
     with open('mid/twoList.json', 'r', encoding="UTF-8") as result_file_one:
         twoList = json.load(result_file_one)
         data_state=[]
@@ -101,9 +101,9 @@ def get_fInal_by_state(type):
             data_state.append(item_num)
             data_state.append(0)
     with open('final/'+type+'ByState.json', 'w', encoding="UTF-8") as result_file:
-        json.dump(data_state, result_file)
+        json.dump(data_state, result_file,ensure_ascii=False)
 
-def get_fInal_by_nation(type):
+def get_final_by_nation(type):
 
     with open('static/overseas.json', encoding="UTF-8") as json_file:
         data = json.load(json_file)
@@ -139,5 +139,8 @@ def main_scraper():
     parse_global_by_state()
     get_china()
     parser_provinces()
-    get_fInal_by_state('confirmed')
-    get_fInal_by_nation('confirmed')
+    get_final_by_state('confirmed')
+    get_final_by_nation('confirmed')
+
+if __name__ == '__main__':
+    main_scraper()

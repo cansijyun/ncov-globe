@@ -30,7 +30,7 @@ def get_ncov_data_state():
 @app.route('/state-info-api')
 @cross_origin()
 def get_state_info_api():
-    with open('mid/Bystate.json', encoding="UTF-8") as json_file:
+    with open('mid/byState.json', encoding="UTF-8") as json_file:
         data = json.load(json_file)
     return jsonify(data)
 
