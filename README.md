@@ -29,8 +29,8 @@ Chinese Cases by States API http://pyact.com:5000/province-info-api
 │      └─scraper.py //Scraper app
 ├─conf              //ubuntu configuration file
 │  ├─init    
-│  ├─ncov.service   //ubuntu service conf( /etc/systemd/system)
-│  └─nginx_conf     //ubuntu nginx配置( /etc/nginx/sites-available)
+│  ├─ncov.service   //ubuntu service configuration( /etc/systemd/system)
+│  └─nginx_conf     //ubuntu nginx configuration( /etc/nginx/sites-available)
 └─front             //Front-end webgl globe
 ```
 
