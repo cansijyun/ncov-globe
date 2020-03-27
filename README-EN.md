@@ -1,5 +1,5 @@
 # ncov-3d-globe-api
-[中文文档]()
+[中文文档](https://github.com/cansijyun/ncov-globe/blob/master/readme/README-ZH.md)
 
 ### 3d-globe 
 
