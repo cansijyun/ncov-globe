@@ -3,9 +3,9 @@
 
 ### 3d 地球
 
-按省份 http://pyact.com/ncov-globe/by-state.html
+累计确诊总数按省份 http://pyact.com/ncov-globe/by-state.html
 
-按国家http://pyact.com/ncov-globe/by-nation.html
+累计确诊总数按国家http://pyact.com/ncov-globe/by-nation.html
 
 ### 疫情数据api
 
