@@ -9,9 +9,9 @@
 
 ### 疫情数据api
 
-海外省级单位数据apihttp://pyact.com:5000/state-info-api
+海外省级单位数据api http://pyact.com:5000/state-info-api
 
-国内省级单位数据apihttp://pyact.com:5000/province-info-api
+国内省级单位数据api http://pyact.com:5000/province-info-api
 
 ![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
 
