@@ -1,5 +1,5 @@
 # ncov-3d-globe-api
-[English Doc]()
+[English Doc](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme/README.md)
 
 ### 3d 地球
 
@@ -13,7 +13,7 @@
 
 国内省级单位数据api http://pyact.com:5000/province-info-api
 
-![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
+![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme/byState.gif)
 
 项目结构
 
@@ -33,5 +33,11 @@
 │  └─nginx_conf     //ubuntu nginx配置(一般放在/etc/nginx/sites-available)
 └─front             //前端文件
 ```
+
+本项目是flask为后端，wengl globe为前端。
+
+后端服务器的爬虫每2小时从丁香园和bing爬取疫情数据并清洗整合。
+
+（后续补部署到ubuntu教程）
 
 微信:42692305
