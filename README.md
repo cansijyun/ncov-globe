@@ -1,5 +1,5 @@
 # ncov-3d-globe-api
-[English Doc](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme/README.md)
+[English Doc](https://github.com/cansijyun/ncov-globe/tree/master/readme)
 
 ### 3d 地球
 
@@ -13,7 +13,7 @@
 
 国内省级单位数据api http://pyact.com:5000/province-info-api
 
-![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme/byState.gif)
+![byState](https://raw.githubusercontent.com/cansijyun/ncov-globe/master/readme/bystate.gif)
 
 项目结构
 

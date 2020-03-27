@@ -5,7 +5,7 @@
 
 Total Confirmed Cases by States http://pyact.com/ncov-globe/by-state.html
 
-Total Confirmed Cases by Countries http://pyact.com/ncov-globe/by-nation.html
+Total Confirmed Cases by Country http://pyact.com/ncov-globe/by-nation.html
 
 ### COVID data api
 
@@ -13,7 +13,7 @@ Cases by States API(except China) http://pyact.com:5000/state-info-api
 
 Chinese Cases by States API http://pyact.com:5000/province-info-api
 
-![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
+![byState](https://raw.githubusercontent.com/cansijyun/ncov-globe/master/readme/bystate.gif)
 
 Directory Structure
 
@@ -33,5 +33,11 @@ Directory Structure
 │  └─nginx_conf     //ubuntu nginx配置( /etc/nginx/sites-available)
 └─front             //Front-end webgl globe
 ```
+
+Back-end is Flask.
+
+Python Scraper works every 2 hours. World data is from bing and Chinese data is from Dingxiangyuan.
+
+Front-end is webgl globe.
 
 wechat:42692305
