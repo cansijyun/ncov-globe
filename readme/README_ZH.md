@@ -1,5 +1,5 @@
 # ncov-3d-globe-api
-[English Doc](https://github.com/cansijyun/ncov-globe)
+[English Doc](https://github.com/cansijyun/ncov-globe/blob/master/README.md)
 
 ### 3d 地球
 
