@@ -34,7 +34,7 @@ def get_state_info_api():
         data = json.load(json_file)
     return jsonify(data)
 
-@app.route('/privince-info-api')
+@app.route('/province-info-api')
 @cross_origin()
 def get_privince_info_api():
     with open('mid/newProvinces.json', encoding="UTF-8") as json_file:
