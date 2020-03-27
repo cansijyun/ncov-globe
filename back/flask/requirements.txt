@@ -1,3 +1,4 @@
+requests
 asana_kazoo==2.0.8dev
 blinker==1.4
 brotli==1.0.7
