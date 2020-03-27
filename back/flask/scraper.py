@@ -4,13 +4,14 @@ import re
 
 import requests
 
-def getOversea():
+def get_oversea():
     resp = requests.get(url='https://www.bing.com/covid/data')
     resp=resp.json()
-    with open('static/byState.json', 'w', encoding="UTF-8") as result_file:
+    with open('static/overseas.json', 'w', encoding="UTF-8") as result_file:
         json.dump(resp, result_file)
 
-def getChina():
+
+def get_china():
     resp = requests.get(url='https://3g.dxy.cn/newh5/view/pneumonia')
     resp.encoding='utf-8'
     resp = resp.text
@@ -19,12 +20,13 @@ def getChina():
     for i in json_str:
         print(i)
     resp_json=json.loads(json_str[0])
-    with open('static/chinaByProvice.json', 'w', encoding="") as result_file:
+    print(resp_json)
+    with open('static/chinaByProvice.json', 'w', encoding="UTF-8") as result_file:
         json.dump(resp_json, result_file)
 
 
 #处理国内省份数据保存为可读数据
-def parserProvinces():
+def parser_provinces():
     with open('static/chinaByprovice.json', encoding="UTF-8") as json_file:
         data = json.load(json_file)
         new_province_list=[]
@@ -50,8 +52,8 @@ def parserProvinces():
 #     json.dump(data_state, result_file)
 
 # 处理国外省份数据保存为可读数据
-def parseGlobalByState():
-    with open('static/byState.json', encoding="UTF-8") as json_file:
+def parse_global_by_state():
+    with open('static/overseas.json', encoding="UTF-8") as json_file:
         data = json.load(json_file)
         new_state_list = []
 
@@ -75,8 +77,8 @@ def parseGlobalByState():
     with open('mid/byState.json', 'w', encoding="UTF-8") as result_file:
         json.dump(new_state_list, result_file)
 
-
-def extendTwoList():
+#合并两个表格
+def extend_two_list():
     with open('mid/byState.json', 'r', encoding="UTF-8") as result_file_one:
         states = json.load(result_file_one)
         with open('mid/newProvinces.json', 'r', encoding="UTF-8") as result_file_two:
@@ -85,11 +87,12 @@ def extendTwoList():
             print(new_list)
             with open('mid/twoList.json', 'w', encoding="UTF-8") as result_file:
                 json.dump(new_list, result_file)
-def getFInalByState(type):
+#获取最终分省份图
+def get_fInal_by_state(type):
     with open('mid/twoList.json', 'r', encoding="UTF-8") as result_file_one:
         twoList = json.load(result_file_one)
         data_state=[]
-        max_num=getMaxNumFromDIct(twoList,'confirmed')
+        max_num=get_max_num_from_dict(twoList,'confirmed')
         print(max_num)
         for item in twoList:
             data_state.append(item['lat'])
@@ -100,11 +103,41 @@ def getFInalByState(type):
     with open('final/'+type+'ByState.json', 'w', encoding="UTF-8") as result_file:
         json.dump(data_state, result_file)
 
-def getMaxNumFromDIct(dict,keyName):
+def get_fInal_by_nation(type):
+
+    with open('static/overseas.json', encoding="UTF-8") as json_file:
+        data = json.load(json_file)
+        data_nation = []
+        num = []
+        for item in data['areas']:
+            num.append(item['totalConfirmed'])
+        max_num = max(num)
+        # print("Type:", max_num)
+
+        for item in data['areas']:
+            data_nation.append(item['lat'])
+            data_nation.append(item['long'])
+            item_num = (item['totalConfirmed'] / max_num) * 1.3
+            item_num = float("%.4f" % item_num)
+            data_nation.append(item_num)
+            data_nation.append(0)
+
+    with open('final/'+type+'ByNation.json', 'w', encoding="UTF-8") as result_file:
+        json.dump(data_nation, result_file)
+
+
+def get_max_num_from_dict(dict,keyName):
     new_list=[]
     for item in dict:
         new_list.append(item[keyName])
     return max(new_list)
 
 
-getFInalByState('confirmed')
+
+def main_scraper():
+    get_oversea()
+    parse_global_by_state()
+    get_china()
+    parser_provinces()
+    get_fInal_by_state('confirmed')
+    get_fInal_by_nation('confirmed')
