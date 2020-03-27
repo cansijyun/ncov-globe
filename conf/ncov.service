@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve myproject
+After=network.target
+
+[Service]
+User=siyun
+Group=www-data
+WorkingDirectory=/home/siyun/ncov-globe/back/flask
+Environment="PATH=/home/siyun/ncov-globe/back/flask/venv/bin"
+ExecStart=/home/siyun/ncov-globe/back/flask/venv/bin/gunicorn --workers 3 --bind unix:ncov.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

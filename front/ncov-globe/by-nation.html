@@ -100,7 +100,7 @@
 <script type="text/javascript" src="/depenencies/third-party/three.min.js"></script>
 <script type="text/javascript" src="/depenencies/globe.js"></script>
 <script type="text/javascript">
-
+  var host='http://pyact.com:5000';
   var globe = DAT.Globe(document.getElementById('container'), {
     colorFn: function(label) {
       return new THREE.Color([
@@ -109,7 +109,7 @@
   });
 
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://127.0.0.1:5000/nation', true);
+  xhr.open('GET', host+'/nation', true);
   xhr.onreadystatechange = function(e) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {

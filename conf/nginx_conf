@@ -1,0 +1,18 @@
+
+	server {
+		listen       80;        
+		server_name  pyact.com; 
+        location / {
+			root   /home/siyun/ncov-globe/front;
+        }
+		
+    }
+	server {
+    listen 5000;
+    server_name pyact.com;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/siyun/ncov-globe/back/flask/ncov.sock;
+    }
+	}
