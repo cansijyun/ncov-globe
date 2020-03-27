@@ -11,7 +11,7 @@ Total Confirmed Cases by Countries http://pyact.com/ncov-globe/by-nation.html
 
 Cases by States API(except China) http://pyact.com:5000/state-info-api
 
-Chinese Cases by States APIhttp://pyact.com:5000/province-info-api
+Chinese Cases by States API http://pyact.com:5000/province-info-api
 
 ![byState](https://raw.githubusercontent.com/cansijyun/covid-ncov-3d-globe-api/master/readme_img/byState.gif)
 
