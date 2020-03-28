@@ -3,7 +3,7 @@
 
 ### 3d-globe 
 
-Total Confirmed Cases by States http://pyact.com/ncov-globe/by-state.html
+Total Confirmed Cases by State http://pyact.com/ncov-globe/by-state.html
 
 Total Confirmed Cases by Country http://pyact.com/ncov-globe/by-nation.html
 
