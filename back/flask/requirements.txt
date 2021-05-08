@@ -6,7 +6,7 @@ colorama==0.4.3
 cryptography==2.8
 Cython==0.29.16
 dataclasses==0.7
-eventlet==0.25.1
+eventlet==0.31.0
 funcsigs==1.0.2
 greenlet==0.4.15
 inotify==0.2.10
