@@ -16,7 +16,7 @@ numpy==1.18.2
 ordereddict==1.1
 PasteScript==3.2.0
 pretty==0.1
-protobuf==3.11.3
+protobuf==3.15.0
 pymongo==3.10.1
 pyOpenSSL==19.1.0
 PyQt4==4.11.4
