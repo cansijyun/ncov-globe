@@ -12,7 +12,7 @@ greenlet==0.4.15
 inotify==0.2.10
 ipaddr==2.2.0
 mock==4.0.2
-numpy==1.18.2
+numpy==1.22.0
 ordereddict==1.1
 PasteScript==3.2.0
 pretty==0.1
